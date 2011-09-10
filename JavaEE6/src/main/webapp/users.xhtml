@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+
+<h:body>
+	<h:form> 
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Nome:" for="name" /><h:inputText id="name" value="${personCreator.newPerson.name}" /><h:message for="name"/>
+			<h:outputLabel value="Email:" for="email" /><h:inputText id="email" value="${personCreator.newPerson.email}" /><h:message for="email"/>
+			<h:outputLabel value="Data de nascimento:" for="birthDate" /><h:inputText id="birthDate" value="${personCreator.newPerson.birthDate}" converter="${dateConverter}" /><h:message for="birthDate"/>
+			
+			<h:commandButton value="Criar" action="${personCreator.save()}" />
+		</h:panelGrid>
+	</h:form>
+</h:body> 
+
+</html>

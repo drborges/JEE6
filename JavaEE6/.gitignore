@@ -1,0 +1,9 @@
+*.class
+*.war
+*.jar
+*.ear
+target/
+.settings/
+.classpath
+.project
+.faces-config.xml*
